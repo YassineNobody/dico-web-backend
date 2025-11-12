@@ -6,11 +6,8 @@
   "scripts": {
     "dev": "nodemon src/app.ts",
     "build": "rimraf dist && tsc",
-    "start": "node dist/app.js",
-    "clean": "rimraf dist",
-    "lint": "eslint 'src/**/*.ts'",
-    "lint:fix": "eslint 'src/**/*.ts' --fix",
-    "test": "echo \"No tests specified\" && exit 0"
+    "start": "npm run build && node dist/app.js",
+    "clean": "rimraf dist"
   },
   "keywords": [
     "express",
