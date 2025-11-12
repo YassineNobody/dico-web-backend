@@ -1,20 +1,26 @@
 {
-  "name": "backend",
+  "name": "dicoweb-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend Node.js + Express + Sequelize + PostgreSQL pour DicoWeb",
+  "main": "dist/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
     "dev": "nodemon src/app.ts",
+    "build": "rimraf dist && tsc",
     "start": "node dist/app.js",
     "clean": "rimraf dist",
     "lint": "eslint 'src/**/*.ts'",
-    "lint:fix": "eslint 'src/**/*.ts' --fix"
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "express",
+    "typescript",
+    "sequelize",
+    "postgresql",
+    "dicoweb"
+  ],
+  "author": "Yass",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "argon2": "^0.44.0",
@@ -33,7 +39,9 @@
     "@types/express": "^5.0.5",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.10.0",
+    "eslint": "^9.12.0",
     "nodemon": "^3.1.10",
+    "rimraf": "^5.0.7",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
